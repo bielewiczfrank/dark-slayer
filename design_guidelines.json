@@ -1,0 +1,192 @@
+{
+  "identity": {
+    "name": "E1",
+    "persona": "The Anti-AI Designer",
+    "mission": "Create a visceral, atmospheric Dark Fantasy experience that breaks the generic 'SaaS' look."
+  },
+  "theme": {
+    "mode": "dark",
+    "archetype": "Jewel & Luxury (Corrupted)",
+    "mood": "Ominous, detailed, magical, kinetic"
+  },
+  "typography": {
+    "instructions": "Import these fonts from Google Fonts. Do NOT use standard sans-serif for headings.",
+    "headings": {
+      "family": "Cinzel, serif",
+      "weights": ["700", "900"],
+      "usage": "Main titles, boss names, legendary item names"
+    },
+    "subheadings": {
+      "family": "Cinzel Decorative, serif",
+      "weights": ["400", "700"],
+      "usage": "Section headers, character classes"
+    },
+    "body": {
+      "family": "Lato, sans-serif",
+      "weights": ["400", "700"],
+      "usage": "Inventory stats, lore text, dialogues"
+    },
+    "ui": {
+      "family": "Rajdhani, sans-serif",
+      "weights": ["600", "700"],
+      "usage": "HUD numbers, damage counters, button text"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "primary": "#050505",
+        "secondary": "#0F0F11",
+        "tertiary": "#1A1A1D"
+      },
+      "text": {
+        "primary": "#E5E5E5",
+        "secondary": "#A1A1AA",
+        "muted": "#52525B",
+        "accent": "#FFD700"
+      },
+      "brand": {
+        "primary": "#4C1D95",
+        "secondary": "#7C3AED",
+        "accent": "#D946EF"
+      },
+      "status": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      },
+      "gameplay": {
+        "health": "#991B1B",
+        "mana": "#5B21B6",
+        "stamina": "#15803D",
+        "gold": "#FFD700",
+        "mythic": "#A855F7",
+        "legendary": "#F59E0B",
+        "epic": "#9333EA",
+        "rare": "#2563EB",
+        "common": "#9CA3AF"
+      }
+    },
+    "gradients": {
+      "primary": "linear-gradient(135deg, #0f0c29, #302b63, #24243e)",
+      "health_bar": "linear-gradient(90deg, #7f1d1d 0%, #ef4444 100%)",
+      "mana_bar": "linear-gradient(90deg, #4c1d95 0%, #8b5cf6 100%)",
+      "gold_text": "linear-gradient(180deg, #F59E0B 0%, #FFD700 50%, #FBBF24 100%)",
+      "dark_overlay": "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)"
+    }
+  },
+  "visual_enhancers": {
+    "borders": {
+      "stone": "4px solid #3F3F46",
+      "magic": "2px solid #7C3AED",
+      "legendary": "2px solid #F59E0B"
+    },
+    "shadows": {
+      "glow": "0 0 15px rgba(124, 58, 237, 0.5)",
+      "deep": "0 10px 30px rgba(0, 0, 0, 0.8)",
+      "text_glow": "0 0 5px rgba(255, 255, 255, 0.5)"
+    },
+    "textures": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-red-900/80 hover:bg-red-800 text-white font-serif border border-red-500/30 rounded-sm shadow-[0_0_10px_rgba(220,38,38,0.3)] uppercase tracking-widest transition-all hover:scale-105 active:scale-95 backdrop-blur-sm",
+      "secondary": "bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-serif border border-slate-700 rounded-sm uppercase tracking-widest transition-all hover:scale-105 active:scale-95 backdrop-blur-sm",
+      "icon": "p-3 rounded-full bg-black/50 border border-white/10 hover:bg-white/10 transition-colors"
+    },
+    "cards": {
+      "item": "bg-black/80 border border-slate-800 p-4 rounded-sm hover:border-purple-500/50 transition-colors relative overflow-hidden group",
+      "character": "bg-gradient-to-b from-slate-900 to-black border border-slate-700 p-6 rounded-lg hover:border-red-500/50 transition-all hover:-translate-y-1 shadow-xl"
+    },
+    "inputs": {
+      "default": "bg-black/50 border border-slate-700 text-slate-100 placeholder:text-slate-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/50 rounded-sm p-3 font-sans"
+    },
+    "modals": {
+      "overlay": "fixed inset-0 bg-black/80 backdrop-blur-sm z-50",
+      "content": "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-slate-700 bg-slate-950 p-6 shadow-lg duration-200 sm:rounded-lg"
+    }
+  },
+  "layout_strategies": {
+    "hud": {
+      "position": "absolute inset-0 pointer-events-none",
+      "layers": "z-10 (Game) < z-20 (HUD) < z-30 (Menus) < z-40 (Modals) < z-50 (Toasts)",
+      "interactions": "HUD elements must use 'pointer-events-auto' to be clickable"
+    },
+    "grid": {
+      "inventory": "grid grid-cols-4 gap-2 md:grid-cols-6 lg:grid-cols-8",
+      "character_select": "grid grid-cols-1 md:grid-cols-3 gap-8"
+    }
+  },
+  "motion": {
+    "transitions": {
+      "default": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+      "hover": "transform 0.2s ease-out"
+    },
+    "animations": {
+      "fade_in": "animate-in fade-in duration-500",
+      "slide_up": "animate-in slide-in-from-bottom-4 duration-500",
+      "pulse_glow": "animate-pulse"
+    }
+  },
+  "image_urls": {
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1734967640286-f8835c3209fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwzfHxkYXJrJTIwZmFudGFzeSUyMGR1bmdlb24lMjBjYXN0bGUlMjBiYWNrZ3JvdW5kJTIwYXRtb3NwaGVyaWN8ZW58MHx8fHwxNzcxNTI3ODUxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Grand Castle Night",
+        "usage": "Main Menu Background"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1707406270248-1c29a17b21f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHxkYXJrJTIwZmFudGFzeSUyMGR1bmdlb24lMjBjYXN0bGUlMjBiYWNrZ3JvdW5kJTIwYXRtb3NwaGVyaWN8ZW58MHx8fHwxNzcxNTI3ODUxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Lightning Castle Storm",
+        "usage": "Boss Fight / Game Over Screen"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1766258863162-2fa31f7a1ee3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHw0fHxkYXJrJTIwZmFudGFzeSUyMGR1bmdlb24lMjBjYXN0bGUlMjBiYWNrZ3JvdW5kJTIwYXRtb3NwaGVyaWN8ZW58MHx8fHwxNzcxNTI3ODUxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Misty Stone Tower",
+        "usage": "Level Select / Loading Screen"
+      }
+    ],
+    "characters": [
+      {
+        "url": "https://images.pexels.com/photos/14201953/pexels-photo-14201953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Armored Knight",
+        "usage": "Knight Class Preview"
+      },
+      {
+        "url": "https://images.pexels.com/photos/6848161/pexels-photo-6848161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Red-haired Battlemage",
+        "usage": "Mage Class Preview"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons.",
+    "Install 'framer-motion' for UI animations.",
+    "Use 'clsx' and 'tailwind-merge' for class management.",
+    "Create a 'PhaserGame' component that wraps the canvas and handles the EventBus.",
+    "The Game Canvas must be full screen (absolute inset-0). UI overlays sit on top.",
+    "Use 'Cinzel' font for all headings to establish the fantasy theme.",
+    "Implement a 'Scanline' or 'Vignette' overlay using CSS pointer-events-none for retro atmosphere.",
+    "Do not use default Shadcn cards. Customize them to be dark, bordered, and semi-transparent.",
+    "Ensure the HUD (Health/Mana) is responsive and stays in the corners on mobile.",
+    "Use the provided image URLs for the respective screens. Do not leave empty placeholders.",
+    "If an image is missing (like Assassin), use a dark silhouette placeholder with a '?' icon or similar."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚 for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN"
+  ]
+}
