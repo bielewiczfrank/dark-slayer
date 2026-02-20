@@ -81,7 +81,7 @@ export const RARITY_COLORS = {
   common: { color: '#9CA3AF', name: 'Zwykly' },
   rare: { color: '#2563EB', name: 'Rzadki' },
   epic: { color: '#9333EA', name: 'Epicki' },
-  mythic: { color: '#A855F7', name: 'Mityczny' },
+  mythic: { color: '#EF4444', name: 'Mityczny' },
   legendary: { color: '#F59E0B', name: 'Legendarny' }
 };
 
