@@ -245,6 +245,33 @@ async def buy_item(data: ShopBuy):
     return updated
 
 
+@api_router.post("/characters/{character_id}/sell")
+async def sell_item(character_id: str, data: dict):
+    char = await db.characters.find_one({"id": character_id}, {"_id": 0})
+    if not char:
+        raise HTTPException(status_code=404, detail="Character not found")
+
+    index = data.get("inventory_index")
+    inventory = char.get("inventory", [])
+    if index is None or index < 0 or index >= len(inventory):
+        raise HTTPException(status_code=400, detail="Invalid inventory index")
+
+    item = inventory[index]
+    sell_price = max(1, int(item.get("price", 10) * 0.5))
+
+    new_inventory = [i for idx, i in enumerate(inventory) if idx != index]
+    new_gold = char["gold"] + sell_price
+
+    await db.characters.update_one(
+        {"id": character_id},
+        {"$set": {"gold": new_gold, "inventory": new_inventory}}
+    )
+
+    updated = await db.characters.find_one({"id": character_id}, {"_id": 0})
+    return {"character": updated, "sold_price": sell_price}
+
+
+
 @api_router.post("/characters/{character_id}/equip")
 async def equip_item(character_id: str, data: EquipItem):
     char = await db.characters.find_one({"id": character_id}, {"_id": 0})
