@@ -70,6 +70,15 @@ export default function Shop() {
     }
   };
 
+  const sellItem = async (index) => {
+    try {
+      const res = await axios.post(`${API}/characters/${characterId}/sell`, { inventory_index: index });
+      setCharacter(res.data.character);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   if (!character) {
     return <div className="min-h-screen bg-dark-primary flex items-center justify-center">
       <p className="font-rajdhani text-slate-500 animate-pulse">Ladowanie...</p>
