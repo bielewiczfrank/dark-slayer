@@ -164,13 +164,22 @@ export default function Shop() {
                       <p className="font-rajdhani text-[10px] text-slate-500">{RARITY_COLORS[rarity]?.name}</p>
                     </div>
                   </div>
-                  <button
-                    onClick={() => equipItem(idx, slot)}
-                    className="px-2 py-1 bg-purple-900/40 border border-purple-500/30 rounded text-xs font-rajdhani text-purple-300 hover:bg-purple-900/60"
-                    data-testid={`equip-item-${idx}`}
-                  >
-                    Zaloz
-                  </button>
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={() => equipItem(idx, slot)}
+                      className="px-2 py-1 bg-purple-900/40 border border-purple-500/30 rounded text-xs font-rajdhani text-purple-300 hover:bg-purple-900/60"
+                      data-testid={`equip-item-${idx}`}
+                    >
+                      Zaloz
+                    </button>
+                    <button
+                      onClick={() => sellItem(idx)}
+                      className="px-2 py-1 bg-red-900/40 border border-red-500/30 rounded text-xs font-rajdhani text-red-300 hover:bg-red-900/60"
+                      data-testid={`sell-item-${idx}`}
+                    >
+                      <span className="flex items-center gap-1"><Coins className="w-3 h-3 text-yellow-500" />{Math.floor((item.price || 10) * 0.5)}</span>
+                    </button>
+                  </div>
                 </div>
               );
             })}
