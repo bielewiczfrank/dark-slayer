@@ -85,7 +85,7 @@ SHOP_ITEMS = [
     {"id": "s1", "name": "Zwoj Leczenia", "type": "scroll", "rarity": "common", "stats": {"heal": 30}, "level_req": 1, "price": 50, "description": "Przywraca 30 punktow zdrowia", "consumable": True},
     {"id": "s2", "name": "Zwoj Kuli Ognia", "type": "scroll", "rarity": "rare", "stats": {"damage": 40}, "level_req": 3, "price": 200, "description": "Zadaje 40 obrazen ognia", "consumable": True},
     {"id": "s3", "name": "Zwoj Blyskawicy", "type": "scroll", "rarity": "epic", "stats": {"damage": 80}, "level_req": 5, "price": 500, "description": "Potezna blyskawica raz?ca wrogow", "consumable": True},
-    {"id": "w12", "name": "Broń Michała", "type": "weapon", "weapon_type": "sword", "rarity": "legendary", "stats": {"attack": 20, "defense": 5, "magic": 1, "speed": 3, "health_bonus": 20}, "level_req": 1, "price": 1, "description": "Tani miecz Michała"},
+    {"id": "w12", "name": "Broń Franka", "type": "weapon", "weapon_type": "sword", "rarity": "legendary", "stats": {"attack": 20, "defense": 5, "magic": 1, "speed": 3, "health_bonus": 20}, "level_req": 1, "price": 1, "description": "Tani miecz Michała"},
 ]
 
 
